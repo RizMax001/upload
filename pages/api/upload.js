@@ -37,7 +37,7 @@ export default async function handler(req, res) {
 
     const file = files.file;
     const filename = path.basename(file.filepath);
-    const fileUrl = `/uploads/${filename}`;
+    const fileUrl = `/${filename}`;
     const fullUrl = `${req.headers.origin || 'https://upload-rizky-maxv1.vercel.app'}${fileUrl}`;
 
     res.status(200).json({
